@@ -23,8 +23,13 @@ public class NewEmptyJUnitTest {
     @Test
     public void checkPalindromo(){
         Palindromos p = new Palindromos();
-        assertTrue(p.espalindromo("1234321"));
-        
-    //la ruta nos aporto otro paso natural    
+        assertTrue(p.palindromo(1234321,10));
+        assertFalse(p.palindromo(1234321,16));
+        assertTrue(p.palindromo(289,16));
+        assertFalse(p.palindromo(1234,2));
+        assertTrue(p.palindromo(273,2));
+        assertFalse(p.palindromo(273,8));
+        assertTrue(p.palindromo(273,16));   
     }
+    
 }
